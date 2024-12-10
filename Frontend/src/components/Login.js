@@ -15,8 +15,8 @@ const Login = () => {
 
     // Determine API endpoint based on user type
     const endpoint = isAdmin
-      ? "http://scholarshipmanagement.up.railway.app/api/admin/login"
-      : "http://scholarshipmanagement.up.railway.app/api/users/login";
+      ? "https://scholarshipmanagement.up.railway.app/api/admin/login"
+      : "https://scholarshipmanagement.up.railway.app/api/users/login";
 
     try {
       const response = await fetch(endpoint, {
