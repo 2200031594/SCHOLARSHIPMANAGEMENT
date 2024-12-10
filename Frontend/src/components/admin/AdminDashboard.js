@@ -11,7 +11,7 @@ const AdminDashboard = () => {
   useEffect(() => {
     const fetchScholarships = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/admin/scholarships");
+        const response = await axios.get("https://scholarshipmanagement.up.railway.app/api/admin/scholarships");
         setScholarships(response.data);
       } catch (error) {
         console.error("Error fetching scholarships:", error);
@@ -23,7 +23,7 @@ const AdminDashboard = () => {
   // Handle delete action
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8080/api/admin/delete-scholarship/${id}`);
+      await axios.delete(`https://scholarshipmanagement.up.railway.app/api/admin/delete-scholarship/${id}`);
       setScholarships((prevScholarships) =>
         prevScholarships.filter((scholarship) => scholarship.id !== id)
       );
@@ -61,7 +61,7 @@ const AdminDashboard = () => {
           {scholarships.map((scholarship) => (
             <div key={scholarship.id} className="scholarship-card">
               <img
-                src={`http://localhost:8080/api/admin/uploads/${scholarship.companyImage}`}
+                src={`https://scholarshipmanagement.up.railway.app/api/admin/uploads/${scholarship.companyImage}`}
                 alt={scholarship.name}
                 className="scholarship-image"
               />
