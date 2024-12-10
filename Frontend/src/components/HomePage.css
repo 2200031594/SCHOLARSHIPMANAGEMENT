@@ -1,0 +1,137 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Header Section */
+  .header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #020202;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+    z-index: 1000;
+    /* Ensure it stays above other content */
+  }
+  
+  
+  .logo-image {
+    height: 50px;
+    cursor: pointer;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links ul li {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #feffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links ul li:hover {
+    color: #fcfafa;
+  }
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    background-color: #060606;
+    padding: 50px 20px;
+    width: 100%;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* About Section */
+  /* About Section Styles */
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #ffffff; /* Dark theme background */
+  color: rgb(12, 12, 12);
+  text-align: center;
+  border-top: 5px solid #fdfefd; /* Optional: Green border for highlighting */
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #4caf50; /* Green color for the title */
+}
+
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.about-features {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.about-features li {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #060606; /* Light gray for the text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-features li::before {
+  content: "✔";
+  color: #4caf50; /* Green check icon */
+  margin-right: 0.5rem;
+}
+
+.about-section p:last-of-type {
+  scroll-margin-top: 80px;
+  font-size: 1.2rem;
+  color: #070707;
+}
+
+  
+  /* Contact Section */
+  .contact-section {
+    scroll-margin-top: 80px;
+    padding: 50px 20px;
+    background-color: #0a0a0a;
+    width: 100%;
+    text-align: center;
+  }
+  

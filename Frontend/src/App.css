@@ -1,0 +1,31 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  
+}
+
+.App {
+  text-align: center;
+}
+
+header, footer {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+}
+
+.hero {
+  background: url('../src/components/image.jpg') no-repeat center center/cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-section {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
+}

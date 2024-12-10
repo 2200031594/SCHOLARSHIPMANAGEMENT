@@ -1,0 +1,125 @@
+/* Main container for Update Scholarship page */
+.update-scholarship {
+    display: flex;
+    height: 100vh; /* Full height of viewport */
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+  }
+  
+  /* Sidebar styling (consistent with AdminDashboard) */
+  .sidebar {
+    width: 20%;
+    background-color: #111;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(255, 255, 255, 0.1);
+  }
+  
+  .sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #222;
+  }
+  
+  /* Main content area */
+  .main-content {
+    width: 80%; /* Remaining space after sidebar */
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Title styling */
+  .update-title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px; /* Space between the title and the form */
+    color: #fff; /* White text */
+    text-transform: uppercase;
+  }
+  
+  /* Update form styling */
+  .update-form {
+    background-color: #111; /* Dark form background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Soft white shadow */
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto; /* Center the form horizontally */
+  }
+  
+  /* Form labels */
+  .update-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ddd; /* Light gray text */
+  }
+  
+  /* Input, textarea, and button styling */
+  .update-form input,
+  .update-form textarea,
+  .update-form button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 14px;
+    color: #000; /* Black text for inputs */
+    background-color: #fff; /* White background */
+    border: 1px solid #333; /* Subtle border */
+    border-radius: 4px;
+  }
+  
+  /* Button-specific styles */
+  .update-form button {
+    background-color: #444; /* Dark gray button */
+    color: #fff; /* White text */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-form button:hover {
+    background-color: #666; /* Lighter gray on hover */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #f00; /* Red text for error */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none; /* Hide sidebar on smaller screens */
+    }
+  
+    .main-content {
+      width: 100%; /* Full width without sidebar */
+      padding: 20px;
+    }
+  
+    .update-form {
+      padding: 20px; /* Smaller padding for smaller screens */
+    }
+  }
+  
