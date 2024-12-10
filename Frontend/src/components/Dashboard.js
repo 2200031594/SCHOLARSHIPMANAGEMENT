@@ -29,7 +29,7 @@ const Dashboard = () => {
     const fetchScholarships = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/admin/scholarships"
+          "https://scholarshipmanagement.up.railway.app/api/admin/scholarships"
         );
         setScholarships(response.data || []);
       } catch (error) {
@@ -41,7 +41,7 @@ const Dashboard = () => {
     const fetchScholarshipTypes = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8080/api/admin/scholarship-types"
+          "https://scholarshipmanagement.up.railway.app/api/admin/scholarship-types"
         );
         setScholarshipTypes(response.data || []);
       } catch (error) {
@@ -74,7 +74,7 @@ const Dashboard = () => {
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/api/applications", {
+      const response = await axios.post("https://scholarshipmanagement.up.railway.app/api/applications", {
         ...formData,
         scholarshipId: currentScholarship.id,
         userId,
@@ -158,7 +158,7 @@ const Dashboard = () => {
               filteredScholarships.map((scholarship) => (
                 <div key={scholarship.id} className="scholarship-card">
                   <img
-                    src={`http://localhost:8080/api/admin/uploads/${scholarship.companyImage}`}
+                    src={`https://scholarshipmanagement.up.railway.app/api/admin/uploads/${scholarship.companyImage}`}
                     alt={scholarship.name}
                     className="scholarship-image"
                   />
