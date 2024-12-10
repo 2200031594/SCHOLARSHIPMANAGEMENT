@@ -22,7 +22,7 @@ const Profile = () => {
         return;
       }
 
-      const endpoint = `http://localhost:8080/api/users/${userId}`;
+      const endpoint = `https://scholarshipmanagement.up.railway.app/api/users/${userId}`;
 
       try {
         const response = await fetch(endpoint);
@@ -56,7 +56,7 @@ const Profile = () => {
 
   const handleUpdate = async () => {
     const userId = localStorage.getItem("userId");
-    const endpoint = `http://localhost:8080/api/users/${userId}`;
+    const endpoint = `https://scholarshipmanagement.up.railway.app/api/users/${userId}`;
 
     try {
       const response = await fetch(endpoint, {
