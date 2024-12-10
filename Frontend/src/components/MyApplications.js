@@ -19,7 +19,7 @@ const MyApplications = () => {
         }
 
         // Fetch all applications from the backend
-        axios.get(`http://localhost:8080/api/applications/user/${userId}`)
+        axios.get(`https://scholarshipmanagement.up.railway.app/api/applications/user/${userId}`)
             .then(response => {
                 // Map null statuses to 'Pending'
                 const updatedApplications = response.data.map(application => ({
