@@ -21,7 +21,7 @@ const UpdateScholarship = () => {
     const fetchScholarship = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/admin/scholarship/${id}`
+          `https://scholarshipmanagement.up.railway.app/api/admin/scholarship/${id}`
         );
         setScholarship(response.data); // Ensure the API response structure matches the state fields
       } catch (error) {
@@ -64,7 +64,7 @@ const UpdateScholarship = () => {
 
     try {
       await axios.put(
-        `http://localhost:8080/api/admin/update-scholarship/${id}`,
+        `https://scholarshipmanagement.up.railway.app/api/admin/update-scholarship/${id}`,
         formData,
         {
           headers: {
