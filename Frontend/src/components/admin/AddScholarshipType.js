@@ -12,7 +12,7 @@ const AddScholarshipType = () => {
       return;
     }
     try {
-      await axios.post("http://localhost:8080/api/admin/add-scholarship-type", {
+      await axios.post("https://scholarshipmanagement.up.railway.app/api/admin/add-scholarship-type", {
         typeName,
       });
       alert("Scholarship type added successfully!");
