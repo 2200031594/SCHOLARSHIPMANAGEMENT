@@ -20,7 +20,7 @@ const AddScholarship = () => {
   useEffect(() => {
     const fetchTypes = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/admin/scholarship-types');
+        const response = await axios.get('https://scholarshipmanagement.up.railway.app/api/admin/scholarship-types');
         setTypes(response.data); // Assuming response.data is an array of types
       } catch (error) {
         console.error('Error fetching scholarship types:', error);
@@ -58,7 +58,7 @@ const AddScholarship = () => {
     formDataToSend.append('type', formData.type); // Add type to the payload
 
     try {
-      const response = await axios.post('http://localhost:8080/api/admin/add-scholarship', formDataToSend, {
+      const response = await axios.post('https://scholarshipmanagement.up.railway.app/api/admin/add-scholarship', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
