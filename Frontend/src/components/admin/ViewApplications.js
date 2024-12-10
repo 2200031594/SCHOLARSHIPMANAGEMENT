@@ -13,7 +13,7 @@ const ViewApplications = () => {
   useEffect(() => {
     const fetchScholarships = async () => {
       try {
-        const response = await axios.get("http://localhost:8080/api/admin/scholarships");
+        const response = await axios.get("https://scholarshipmanagement.up.railway.app/api/admin/scholarships");
         setScholarships(response.data);
       } catch (error) {
         console.error("Error fetching scholarships:", error);
@@ -25,7 +25,7 @@ const ViewApplications = () => {
   // Fetch applications for a selected scholarship
   const fetchApplications = async (scholarshipId) => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/applications/scholarship/${scholarshipId}`);
+      const response = await axios.get(`https://scholarshipmanagement.up.railway.app/api/applications/scholarship/${scholarshipId}`);
       setApplications(response.data);
       setSelectedScholarship(scholarshipId);
     } catch (error) {
@@ -36,7 +36,7 @@ const ViewApplications = () => {
   // Handle approve or reject action
   const handleAction = async (applicationId, action) => {
     try {
-      await axios.put(`http://localhost:8080/api/applications/${applicationId}/${action}`);
+      await axios.put(`https://scholarshipmanagement.up.railway.app/api/applications/${applicationId}/${action}`);
       alert(`Application ${action}d successfully!`);
       // Refresh applications list after action
       fetchApplications(selectedScholarship);
